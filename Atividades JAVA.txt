@@ -1,0 +1,1001 @@
+Esses arquivos podem ser encontrados online no endereço: https://github.com/CledsonBAR/Atividades_pratica_Java
+
+Atividade . 1.   Usando a classe Scanner para entrada de dados, crie uma classe que receba o valor da base e da altura de 
+um triângulo retângulo e mostre sua área. A área de um triângulo retângulo é calculada por meio da 
+fórmula: área = base * altura / 2.
+
+/*
+** Programa:Triangulo / Atividade 1
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para medir a área de um triângulo retângulo
+*/
+
+import java.util.Scanner;
+
+public class Triangulo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		double base; 
+		double altura; 
+		double area;
+		
+		System.out.println("Digite a base do triângulo retângulo = " );
+		base = input.nextDouble();
+		
+		System.out.println("Digite a altura do triângulo retângulo = " );
+		altura = input.nextDouble();
+		
+		area = base * altura / 2 ;
+		System.out.printf("A área do triangulo retangulo é = " + area);
+		
+		input.close();
+
+	}
+
+}
+
+
+Atividade 2. Elabore uma classe que receba dois valores numéricos (valor1 e valor2) e apresente em tela o resultado das 
+quatro operações matemáticas básicas entre eles, ou seja, soma, subtração, multiplicação e divisão e ainda, 
+o resto da divisão do primeiro pelo segundo.
+
+/*
+** Programa: Operacoes / Atividade 2
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para para exibir operações matemáticas
+*/
+
+import java.util.Scanner;
+
+public class Operacoes {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		int x, y;
+		int soma, subtracao, multiplicacao, divisao, resto;
+		
+		System.out.println("Digite o primeiro número");
+		x = input.nextInt();
+		
+		System.out.println("Digite o segundo número");
+		y = input.nextInt();
+		
+		soma = x + y;
+		subtracao = x - y;
+        multiplicacao = x * y;
+        divisao = x / y;
+        resto = x % y;
+        
+        System.out.println("Soma: " + soma);
+        System.out.println("Subtração: " + subtracao);
+        System.out.println("Multiplicação: " + multiplicacao);
+        System.out.println("Divisão: " + divisao);
+        System.out.println("Resto: " + resto);
+
+	input.close();
+        }
+}
+
+Atividade 3. Um usuário possui uma internet banda larga com velocidade fixa de 2 Mb (2 Megabits) por segundo. Elabore 
+uma classe que receba o tamanho do arquivo em bytes e apresente a quantidade de segundos necessária 
+para fazer o download. Considere que 8 bits equivalem a 1 byte.
+
+/*
+** Programa: BandaLarga / Atividade 3
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que medirá o tempo total para o usuário fazer o download de um determinado arquivo.
+*/
+
+import javax.swing.JOptionPane;
+
+public class BandaLarga {
+	
+    public static void main(String[] args) {
+    	
+        String arquivo = JOptionPane.showInputDialog("Tamanho do arquivo (em bytes): ");
+        
+        String velocidade = JOptionPane.showInputDialog("Velocidade de conexão à internet: ");
+        
+        int tamanho = Integer.parseInt(arquivo);
+        
+        int tempo = tamanho  / 250000;
+        
+        JOptionPane.showMessageDialog(null, "Tamanho do arquivo em bytes: " + tamanho + "\n"
+        		+ "Segundos necessários para download: " + tempo );
+    }
+}
+
+
+Atividade 4. Faça um aplicativo Java para calcular o volume de uma esfera de raio r. Considere 𝑉  = 4𝜋𝑟³
+                                                                                                     3 
+
+/*
+** Programa: Esferas / Atividade 3
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para calcular o volume de uma esfera
+*/
+
+import java.util.Scanner;
+
+public class Esferas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		double raio, volume;
+		
+		System.out.println("Digite o raio da esfera: ");
+		raio = input.nextDouble();
+		
+		volume =  (4.0 / 3.0) * Math.PI * Math.pow(raio, 3);
+		System.out.printf("O volume da esfera é: %.2f", volume);
+		
+		input.close();
+	}
+
+}
+
+Atividade 5. Faça outro aplicativo Java para calcular a área de uma superfície esférica, dado o raio. A área de uma 
+superfície esférica é dada pela fórmula: 𝐴  =  4𝜋𝑟 2
+
+/*
+** Programa: Superficie / Atividade 5
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para medir a superficie esférica 
+*/
+
+import java.util.Scanner;
+
+public class Superficie {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		double raio, area;
+		
+		System.out.println("Digite o raio da esfera: ");
+		raio = input.nextDouble();
+		
+		area = 4 * Math.PI * Math.pow(raio, 2);
+		System.out.printf("A área da superficie da esfera é: %.2f", area);
+		
+		input.close();
+
+	}
+
+}
+
+
+Atividade 6. Faça um programa em Java para converter um valor em Reais (R$) para dólares (U$) sendo informados o 
+valor em reais e a cotação do dia.
+
+/*
+** Programa: Conversor / Atividade 6
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para conversão de real em dólar
+*/
+
+import java.util.Scanner;
+
+public class Conversor {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		double cotacao_dolar, valor_dolar, valor_real;
+		
+		System.out.println("Conversor de dólar em real\n\n");
+		
+		System.out.println("Digite o valor da cotação do dólar:");
+		cotacao_dolar = entrada.nextDouble();
+		
+		System.out.println("Digite o valor em dólar");
+		valor_dolar = entrada.nextDouble();
+		
+		valor_real = valor_dolar * cotacao_dolar;
+		
+		System.out.print("O valor em real é: R$" + valor_real + "\n");
+		
+		entrada.close();
+
+	}
+
+}
+
+Atividade 7. Construa um programa em Java para ler o salário de um funcionário e imprimi-lo com um aumento de 15%.
+
+/*
+** Programa: Salario / Atividade 7
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para calcular o reajuste num determinado salário
+*/
+
+import java.util.Scanner;
+
+public class Salario {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        double salario, reajuste, novosalario;
+
+        System.out.println("Digite o valor do salário:\n ");
+        salario = entrada.nextDouble();
+
+        System.out.println("Digite o valor do reajuste:\n ");
+        reajuste = entrada.nextDouble();
+
+        novosalario = salario + (salario * (reajuste / 100));
+		
+        System.out.printf("O salário novo é = R$ %.2f \n",novosalario);
+        
+        entrada.close();
+        }
+    }
+
+Atividade 8. Fazer um programa em Java para efetuar o cálculo do valor de uma prestação em atraso, utilizando a 
+fórmula: prestacao = valor + (valor * (taxa/100) * tempo)
+
+/*
+** Programa: PrestacaoAtraso / Atividade 8
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para calcular o valor de uma prestação em atraso
+*/
+
+import java.util.Scanner;
+
+public class PrestacaoAtraso {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada = new Scanner(System.in);
+		
+		double valor;
+		double taxa;
+		double tempo;
+		
+		
+		System.out.println("Digite o valor da prestação: " );
+		valor = entrada.nextDouble();
+		System.out.println("Digite a taxa de juros: " );
+		taxa = entrada.nextDouble();
+		System.out.println("Digite quantos meses está em atraso: " );
+		tempo = entrada.nextDouble();
+		
+		double prestacao = valor + (valor * (taxa/100) * tempo);
+		System.out.printf("O valor da prestação em atraso é: R$ " + prestacao);
+
+		entrada.close();
+
+	}
+
+}
+
+Atividade 9. Criar um programa em Java para calcular e imprimir o salário líquido de um (pobre) professor. Os dados 
+fornecidos serão: o valor da hora-aula, número de aulas dadas no mês e percentual de desconto do INSS.
+
+/*
+** Programa: CalculadoraSalario / Atividade 9
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para calcular o salário com descontos do INSS
+*/
+
+import java.util.Scanner;
+
+public class CalculadoraSalario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		
+		double valor_horas_aulas, numeros_aulas, descontoINSS, salario, Salario_liquido;
+		
+		System.out.println("Digite o valor da hora aula: ");
+		valor_horas_aulas = input.nextDouble();
+		
+		System.out.println("Digite o número de horas aulas ministradas no mês: ");
+		numeros_aulas = input.nextDouble();
+		
+		System.out.println("Digite o percentual de desconto do INSS: ");
+		descontoINSS = input.nextDouble();
+		
+		salario = valor_horas_aulas * numeros_aulas;
+		Salario_liquido = salario - (salario * (descontoINSS / 100));
+		System.out.printf("O salário líquido do professor é de: R$ %.2f ", Salario_liquido);
+		
+		input.close();
+	}
+
+}
+
+Atividade 10. Faça um programa em Java para ler a razão de uma P.A. e o valor do primeiro termo (a1) e em seguida 
+calcular e imprimir o valor do N(ésimo - an) termo da série (N informado pelo usuário). 
+Considere: 𝑎𝑛   =  𝑎1  + (𝑛 − 1). 𝑟   em que a1 é o primeiro termo, r é a razão e n o número informado pelo 
+usuário.
+
+/*
+** Programa: ProgressaoAritmetica / Atividade 10
+** Autor: Cledson Barreto Araújo
+** Data: 23/09/2022
+** Observações: Programa JAVA para ler a Progressão Aritmétca do valor informado
+*/
+
+import java.util.Scanner;
+
+public class ProgressaoAritmetica {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		double a1, r, n, an;
+		
+		System.out.println("Digite o valor do primeiro termo (a1): ");
+		a1 = input.nextDouble();
+		
+		System.out.println("Digite a razão da P.A.: ");
+		r = input.nextDouble();
+		
+		System.out.println("Digite o valor de N(ésimo - an): ");
+		n = input.nextDouble();
+		
+		an = a1 + (n - 1) * r;
+		System.out.printf("O valor de N(ésimo - an) é: %.2f", an);
+		
+		input.close();
+	}
+
+}
+
+Atividade 11. Dados o primeiro termo e a razão de uma P.A., mostrar a soma dos N primeiros termos (com N informado 
+pelo usuário) desta P.A. A soma dos termos de uma P.A. é dada pela fórmula:
+  
+   an = ( a1 + an ) * n.
+            /2
+Onde a1 é o primeiro termo, an é o último termo e n é a quantidade de termos (ou o enésimo termo, 
+fornecido pelo usuário).(DICA: para saber o Enésimo termo – o último – use a fórmula da questão anterior).
+
+/*
+** Programa: TermosPA / Atividade 11
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA para informar os termos da série de uma Progressão Aritmética. 
+*/
+import java.util.Scanner;
+
+public class TermosPA {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input = new Scanner(System.in);
+        
+        int a1;
+        int an;
+        int n;
+        int soma;
+        
+        System.out.print("Digite o primeiro termo: ");
+        a1 = input.nextInt();
+
+        System.out.print("Digite o último termo: ");
+        an = input.nextInt();
+
+        System.out.print("Digite o número de termos: ");
+        n = input.nextInt();
+        
+        soma = ( a1 + an ) * n / 2;
+        
+        System.out.println( "A soma dos termos é: " + soma );
+
+        input.close();
+        
+    }
+
+}
+
+Atividade 12. Escrever um programa em Java que leia três valores inteiros distintos e os escreva em ordem crescente.
+
+/*
+** Programa: OrdemCrescente / Atividade 12
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que lê três valores inteiros distintos e os escreve em ordem crescente.
+*/
+
+import java.util.Scanner;
+
+public class OrdemCrescente {
+	
+    public static void main(String[] args) {
+    	
+        Scanner input = new Scanner(System.in);
+        
+        int n1, n2, n3;
+        
+        System.out.print("Digite o primeiro número: ");
+        n1 = input.nextInt();
+        
+        System.out.print("Digite o segundo número: ");
+        n2 = input.nextInt();
+        
+        System.out.print("Digite o terceiro número: ");
+        n3 = input.nextInt();
+        
+        if (n1 < n2 && n1 < n3) {
+            if (n2 < n3) {
+                System.out.println(n1 + " " + n2 + " " + n3);
+            } else {
+                System.out.println(n1 + " " + n3 + " " + n2);
+            }
+        } else if (n2 < n1 && n2 < n3) {
+            if (n1 < n3) {
+                System.out.println(n2 + " " + n1 + " " + n3);
+            } else {
+                System.out.println(n2 + " " + n3 + " " + n1);
+            }
+        } else if (n3 < n1 && n3 < n2) {
+            if (n1 < n2) {
+                System.out.println(n3 + " " + n1 + " " + n2);
+            } else {
+                System.out.println(n3 + " " + n2 + " " + n1);
+            }
+            input.close();
+        }
+    }
+}
+
+Atividade 13. Escreva um programa em Java que inicializa uma variável inteira  n  com o valor 5814 e após use os operadores de 
+quociente e de resto para extrair e imprimir cada dígito de n. A saída deve parecer como se segue:  
+
+• n = 5814   
+• Os dígitos de n são 5, 8, 1 e 4. 
+• DICA: Use n/1000 para extrair o dígito de milhar de n, e após use n%= 1000 para remover o dígito de milhar de n.
+
+/*
+** Programa: Quociente / Atividade 13
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que ao receber um número inteiro na variável "n", extrairá cada dígito da variável
+*/
+
+import java.util.Scanner;
+
+public class Quociente {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input = new Scanner(System.in);
+        
+        int n;
+        
+        System.out.print("Digite um número inteiro: ");
+        n = input.nextInt();
+        
+        System.out.println("Os dígitos de n são " + n/1000 + ", " + n%1000/100 + ", " + n%100/10 + " e " + n%10);
+        
+        input.close();
+        
+    }
+
+}
+
+Atividade 14. Faça um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele 
+no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o total a 
+receber no final do mês, com duas casas decimais. 
+
+/*
+** Programa: SalarioVendedor / Atividade 14
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta o nome do vendedor, salário fixo, vendas do mês, calcula a comissão e 
+** soma ao salário.
+*/
+
+import java.util.Scanner;
+
+public class SalarioVendedor {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String nome;
+        double salario, vendas, total;
+
+        System.out.print("Nome do vendedor: ");
+        nome = input.nextLine();
+        System.out.print("Salário fixo: R$ ");
+        salario = input.nextDouble();
+        System.out.print("Total de vendas: R$ ");
+        vendas = input.nextDouble();
+
+        total = salario + (vendas * 0.15);
+
+        System.out.printf("O salário de " + nome +  " é R$ %.2f %n", total);
+
+        input.close();
+    }
+}
+
+Atividade 15. Escrever um programa em Java que leia o nome de um vendedor, o seu salário fixo e o total de vendas 
+efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 8% de comissão sobre suas vendas efetuadas, 
+informar o seu nome, o salário fixo e salário no final do mês.
+
+/*
+** Programa: SalarioVendedor2 / Atividade 15
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta o nome do vendedor, salário fixo, vendas do mês, calcula a comissão e 
+** soma ao salário.
+*/
+
+import java.util.Scanner;
+
+public class SalarioVendedor2 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String nome;
+        double salario, vendas, total;
+
+        System.out.println("Nome do vendedor: ");
+        nome = input.nextLine();
+
+        System.out.println("Salário fixo: R$ ");
+        salario = input.nextDouble();
+
+        System.out.println("Total de vendas: R$ ");
+        vendas = input.nextDouble();        
+
+        total = salario + (vendas * 0.08);       
+
+        System.out.printf("O salário fixo de " + nome +  " é R$ %.2f %n", salario);
+
+        System.out.printf("O seu salário no final do mês somado às suas comissões é R$ %.2f %n", total);
+
+        input.close();
+    }
+}
+
+Atividade 16. Faça um programa em Java que leia o tempo de duração de um evento em uma fábrica expressa em 
+segundos e mostre-o expresso em horas, minutos e segundos.
+
+/*
+** Programa: Fabrica / Atividade 16
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta o tempo em segundos e converte em horas, minutos e segundos.
+*/
+
+import java.util.Scanner;
+
+public class Fabrica {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int tempo, horas, minutos, segundos;
+
+        System.out.println("Digite o tempo de duração do evento em segundos: ");
+        tempo = input.nextInt();
+        
+        horas = tempo / 3600;
+        minutos = (tempo % 3600) / 60;
+        segundos = (tempo % 3600) % 60;
+
+        System.out.println("O evento durou " + horas + " horas, " + minutos + " minutos e " + segundos + " segundos.");
+
+        input.close();
+    }
+}
+
+Atividade 17. A granja “Frangos Gauss” possui um controle automatizado de cada frango da sua produção. No pé direito do frango 
+há um anel com um chip de identificação; no pé esquerdo são dois anéis para indicar o tipo de alimento que ele deve consumir. 
+Sabendo que o anel com chip custa R$ 3 e o anel de alimento custa R$ 2,50 , faça um programa em Java para calcular o gasto total 
+da granja para marcar todos os seus frangos. (a quantidade de frangos deve ser lida pelo usuário).
+
+/*
+** Programa: Granja / Atividade 17
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que gerencia os gastos da granja totalizando os custos para identificar e 
+** controlar a alimentação de cada frango da sua produção.
+*/
+
+import java.util.Scanner;
+
+public class Granja {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int numeroFrangos;
+        float chip, anel;
+
+        System.out.println("Informe o número de frangos: ");
+        numeroFrangos = entrada.nextInt();
+
+        System.out.println("Informe o valor do anel com chip: R$ ");
+        chip = entrada.nextFloat();
+
+        System.out.println("Informe o valor do anel de alimentação: R$ ");
+        anel = entrada.nextFloat();
+
+        double gastoTotal = numeroFrangos * (chip + (anel * 2));
+
+        System.out.printf("O gasto total da granja para controlar os frangos é de R$ %.2f %n", gastoTotal);
+
+        entrada.close();
+    }
+}
+
+Atividade 18. O preço de um automóvel é calculado pela soma do preço de fábrica com o preço dos impostos (45% do 
+preço de fábrica) e a porcentagem do revendedor (28% do preço de fábrica). Faça um programa em Java que leia o 
+nome do automóvel e o preço de fábrica e imprima o nome do automóvel e o preço final. 
+
+/*
+** Programa: Montadora / Atividade 18
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que exibe o modelo do carro e calcula o preço de revenda com os impostos
+*/
+
+import java.util.Scanner;
+
+public class Montadora {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String nome;
+        double precoFabrica, precoFinal;
+
+        System.out.println("Digite o nome do automóvel: ");
+        nome = input.nextLine();
+
+        System.out.println("Digite o preço de fábrica: R$ ");
+        precoFabrica = input.nextDouble();
+
+        precoFinal = precoFabrica + (precoFabrica * 0.45) + (precoFabrica * 0.28);
+        System.out.printf("O preço final do automóvel " + nome + " é R$ %.2f: ", precoFinal);
+
+        input.close();
+    }
+}
+
+Atividade 19. Leia 3 valores, no caso, variáveis A, B e C, que são as três notas de um aluno. A seguir, calcule a média do 
+aluno, sabendo que a nota A tem peso 2, a nota B tem peso 3 e a nota C tem peso 5. Considere que cada nota pode ir de 0 
+até 10.0, sempre com uma casa decimal.
+
+/*
+** Programa: NotaAluno / Atividade 19
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta as notas de um aluno e exibe sua média
+*/
+
+import java.util.Scanner;
+
+public class NotaAluno {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double notaA, notaB, notaC;
+
+        System.out.println("Digite a primeira nota: ");
+        notaA = input.nextDouble();
+        
+        System.out.println("Digite a segunda nota: ");
+        notaB = input.nextDouble();
+
+        System.out.println("Digite a terceira nota: ");
+        notaC = input.nextDouble();
+
+        double media = (notaA * 2 + notaB * 3 + notaC * 5) / 10;
+
+        System.out.printf("A média final é: %.1f)%n", media);
+        
+        input.close();
+    }
+}
+
+20. Escreva um programa que leia três valores com ponto flutuante de dupla precisão:  A, B e C. Em seguida, calcule e mostre:
+ 
+a.  A área do triângulo retângulo que tem A por base e C por altura. 
+b.  A área do círculo de raio C. (pi = 3.14159) 
+c.  A área do trapézio que tem A e B por bases e C por altura. 
+d.  A área do quadrado que tem lado B. 
+
+/*
+** Programa: PontoFlutuante / Atividade 20
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta dados do usuário e calcula a área de diversas formas geométricas 
+*/
+
+import java.util.Scanner;
+
+public class PontoFlutuante {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double A, B, C;
+
+        System.out.println("Digite o valor de A: ");
+        A = input.nextDouble();
+
+        System.out.println("Digite o valor de B: ");
+        B = input.nextDouble();
+
+        System.out.println("Digite o valor de C: ");
+        C = input.nextDouble();
+
+        double areaTrianguloRetangulo, areaCirculo, areaTrapezio, areaQuadrado;
+
+        areaTrianguloRetangulo = (A * C) / 2;
+        areaCirculo = 3.14159 * (C * C);
+        areaTrapezio = ((A + B) * C) / 2;
+        areaQuadrado = B * B;
+
+        System.out.printf("A área do triângulo retângulo é: %.3f%n", areaTrianguloRetangulo);
+
+        System.out.printf("A área do círculo é: %.3f%n", areaCirculo);
+
+        System.out.printf("A área do trapézio é: %.3f%n", areaTrapezio);
+
+        System.out.printf("A área do quadrado é: %.3f%n", areaQuadrado);
+
+        input.close();
+    }
+}
+
+Atividade 21. A área do retângulo que tem lados A e B. Um sistema de equações lineares do tipo: ax + by = c , dx + ey = f , 
+pode ser resolvido com a fómula: x = ce - bf / ae - bd , y = af - cd / ae - bd 
+Escreva um aplicativo em Java que lê os coeficientes a, b, c, d, e, f, calcule e mostre os valores de x e y.
+
+/*
+** Programa: Equacoes / Atividade 21
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta dados para um sistema de equações lineares
+*/
+
+import java.util.Scanner;
+
+public class Equacoes {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double a, b, c, d, e, f;
+
+        System.out.println("Digite o valor de a: ");
+        a = input.nextDouble();
+
+        System.out.println("Digite o valor de b: ");
+        b = input.nextDouble();
+
+        System.out.println("Digite o valor de c: ");
+        c = input.nextDouble();
+
+        System.out.println("Digite o valor de d: ");
+        d = input.nextDouble();
+
+        System.out.println("Digite o valor de e: ");
+        e = input.nextDouble();
+
+        System.out.println("Digite o valor de f: ");
+        f = input.nextDouble();
+
+        double x, y;
+
+        x = (c * e - b * f) / (a * e - b * d);
+        y = (a * f - c * d) / (a * e - b * d);
+
+        System.out.printf("O valor de x é: %.3f%n", x);
+        System.out.printf("O valor de y é: %.3f%n", y);
+
+        input.close();
+    }
+}
+
+Atividade 22. Ler dois valores para as variáveis (inteiras) A e B e efetuar a troca dos valores de forma que a variável A passe 
+a ter o valor da variável B e a variável B passe a ter o valor da variável A. Apresentar os valores trocados.
+
+/*
+** Programa: TrocaTroca / Atividade 22
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coletará os valores das variáveis A e Bfará a troca dos valores e os apresentará trocados.
+*/
+
+import java.util.Scanner;
+
+public class TrocaTroca {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int a, b;
+
+        System.out.println("Digite o valor de a: ");
+        a = input.nextInt();
+
+        System.out.println("Digite o valor de b: ");
+        b = input.nextInt();
+
+        int c = a;
+        a = b;
+        b = c;
+
+        System.out.printf("O valor de a é: %d%n", a);
+        System.out.printf("O valor de b é: %d%n", b);
+
+        input.close();
+    }
+}
+
+Atividade 23. 23. A concessionária de veículos “FERMAT” está vendendo os seus veículos com descontos especiais para 
+aproveitar o IPI reduzido. Faça um programa em Java que calcule e exiba o valor do desconto e o valor a ser 
+pago pelo cliente. O desconto deverá ser calculado sobre o valor do veículo de acordo com o combustível 
+(álcool – 28%, gasolina – 22% ou diesel –12%). Com valor do veículo zero encerra entrada de dados. Informe 
+total de desconto e total pago pelos clientes.
+
+/*
+** Programa: Descontos / Atividade 23
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coleta os dados do veículo e informa o desconto concedido e o valor a pagar 
+*/
+
+import java.util.Scanner;
+
+public class Descontos {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double combustivel, desconto, totalDesconto = 0, totalPago = 0;
+        int valor = 0;
+
+        System.out.println("Digite o valor do veículo: ");
+        valor = input.nextInt();
+
+        System.out.println("Digite o tipo do combustível: 1 = Álcool, 2 = Gasolina, 3 = Diesel, 4 = Fim");
+        combustivel = input.nextDouble();             
+            
+            if (combustivel == 1) {
+                desconto = valor * 0.28;
+            } else if (combustivel == 2) {
+                desconto = valor * 0.22;
+            } else if(combustivel == 3) {
+                desconto = valor * 0.12;
+            }else{
+                desconto = 0;
+            }
+            totalDesconto += desconto;
+            totalPago += valor - desconto;
+        
+        System.out.printf("O cliente teve um desconto total de: R$ %.2f%n", totalDesconto);
+        System.out.printf("O cliente pagará o total de : R$ %.2f%n", totalPago);
+
+        input.close();
+    }
+}
+
+Atividade 24. Elabore um programa em Java que, dada a idade de um nadador, classifique-o em uma das seguintes 
+categorias:
+
+a.   Infantil A = 4 - 7 anos
+b.   Infantil B = 8 - 9 anos
+c.    Juvenil A = 10- 12 anos
+d.    Juvenil B = 13 - 17 anos
+e.       Sênior = 18 - 25 anos
+f.    Apresentar mensagem “idade fora da faixa etária” quando for outro ano não contemplado.
+
+/*
+** Programa: FaixaEtaria / Atividade 24
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que classificará os nadadores por faixa etária.
+*/
+
+import java.util.Scanner;
+
+public class FaixaEtaria {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int idade;
+
+        System.out.print("Digite a idade do nadador: ");
+        idade = input.nextInt();
+
+        if (idade >= 4 && idade <= 7) {
+            System.out.println("Infantil A");
+        } else if (idade >= 8 && idade <= 9) {
+            System.out.println("Infantil B");
+        } else if (idade >= 10 && idade <= 12) {
+            System.out.println("Juvenil A");
+        } else if (idade >= 13 && idade <= 17) {
+            System.out.println("Juvenil B");
+        } else if (idade >= 18 && idade <= 25) {
+            System.out.println("Sênior");
+        } else {
+            System.out.println("Idade fora da faixa etária");
+            input.close();
+        }
+    }
+}
+
+
+Atividade 25. Usando a classe JOptionPane para entrada de dados, elabore uma classe que realize o cálculo do peso ideal 
+usando o IMC (Índice de Massa Corporal). Considere a tabela seguinte; 
+
+            IMC     ====    Classificações
+    Menor do que 18,5 = abaio do peso normal ; 
+          18,5 - 24,9 = peso normal; 
+          25,0 - 29,9 = excesso de peso; 
+          30,0 - 34,9 = obesidade classe I; 
+          35,0 - 39,9 = obesidade classe II; 
+Maior ou igual a 40,0 = Obesidade classe III. 
+
+Para calcular o IMC use a fórmula IMC = peso / altura2. . Solicite o peso e a altura do usuário, faça o cálculo e apresente a mensagem correspondente.*/
+
+
+/*
+** Programa: IMC / Atividade 25
+** Autor: Cledson Barreto Araújo
+** Data: 24/09/2022
+** Observações: Programa JAVA que coletará os dados de peso e altura e informará como está a situação do IMC.
+*/
+
+import javax.swing.JOptionPane;
+
+public class IMC {
+    public static void main(String[] args) {
+
+        double peso, altura, imc;
+
+        peso = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso: "));
+
+        altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura: "));
+
+        imc = peso / (altura * altura);
+        
+        if (imc < 18.5) {
+            JOptionPane.showMessageDialog(null, " Seu índice de massa corporal (IMC) é = " + imc + "\n" 
+                    + " Abaixo do peso normal ");
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            JOptionPane.showMessageDialog(null, " Seu índice de massa corporal (IMC) é = " + imc + "\n"
+                    + " Peso normal ");
+        } else if (imc >= 25.0 && imc <= 29.9) {
+            JOptionPane.showMessageDialog(null, " Seu índice de massa corporal (IMC) é = " + imc + "\n"
+                    + " Excesso de peso ");
+        } else if (imc >= 30.0 && imc <= 34.9) {
+            JOptionPane.showMessageDialog(null, " Seu índice de massa corporal (IMC) é = " + imc + "\n"
+                    + " Obesidade classe I ");
+        } else if (imc >= 35.0 && imc <= 39.9) {
+            JOptionPane.showMessageDialog(null, " Seu índice de massa corporal (IMC) é = " + imc + "\n"
+                    + " Obesidade classe II ");
+        } else {
+            JOptionPane.showMessageDialog(null, " Seu índice de massa corporal (IMC) é = " + imc + "\n"
+                    + " Obesidade classe III ");
+        }
+    }
+}
